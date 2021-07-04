@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.bootstudy.mapper.StudentMapper">
+
+    <select id="queryStudentById" resultType="com.example.bootstudy.entity.Student" parameterType="java.lang.String">
+        select
+               sno as sno,
+               sname as name,
+               ssex as sex
+        from STUDENT where sno = #{sno}
+    </select>
+
+    <select id="queryStudentByIdOne" resultType="com.example.bootstudy.entity.Student" parameterType="java.lang.String">
+        select
+            sno as sno,
+            sname as name,
+            ssex as sex
+        from STUDENT where sno = #{sno}
+    </select>
+
+    <insert id="add" parameterType="com.example.bootstudy.entity.Student">
+        insert into STUDENT (`SNO`,`SNAME`,`SSEX`) values  (#{sno},#{name},#{sex})
+    </insert>
+</mapper>
