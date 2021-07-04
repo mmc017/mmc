@@ -29,6 +29,8 @@ public class DataSourceFactory {
 
     private static final String MAPPER_LOCATION = "classpath:mapper/*.xml";
 
+
+
     /***
      * 创建 DruidXADataSource testOne 用@ConfigurationProperties 自动配置属性
      */
